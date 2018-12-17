@@ -5,9 +5,3 @@
 using namespace WinSysLib;
 
 //////////////////////////////////////////////////////////////////////////
-
-
-SvcInfo::SvcInfo()
-    : m_type(ESvcType::Undefined)
-{
-}
