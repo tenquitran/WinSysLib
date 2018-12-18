@@ -5,3 +5,14 @@
 using namespace WinSysLib;
 
 //////////////////////////////////////////////////////////////////////////
+
+
+SvcInfo::SvcInfo(const CAtlString& svcName)
+    : m_serviceName(svcName)
+{
+}
+
+bool SvcInfo::isValid() const
+{
+    return (ESvcType::Undefined == m_type);
+}

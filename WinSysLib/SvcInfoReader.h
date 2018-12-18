@@ -7,7 +7,10 @@ namespace WinSysLib
     class SvcInfoReader
     {
     public:
-        SvcInfoReader();
-        ~SvcInfoReader();
+        // Check service status.
+        // Parameters: svcName - service name.
+        // Exceptions: std::bad_alloc
+        // Returns: service info (use isValid() to check its state.
+        static SvcInfo checkServiceStatus(const CAtlString& svcName);
     };
 }

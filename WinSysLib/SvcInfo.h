@@ -6,8 +6,14 @@ namespace WinSysLib
     // Data about the Windows service.
     struct SvcInfo
     {
+    public:
+        explicit SvcInfo(const CAtlString& svcName);
+
+        // Returns true if the data are valid.
+        bool isValid() const;
+
     private:
-        // Service name, or registration name.
+        // Service name.
         CAtlString m_serviceName;
 
         // Display name.
